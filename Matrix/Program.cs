@@ -147,8 +147,13 @@ namespace Matrix
         {
             string s = "1 2 3 4";
             Matrix m = Matrix.TryParse(s);
-            Display(m);
-
+            Matrix m2 = new Matrix();
+            Matrix[] ma = new Matrix[] { m, m2 };
+            ListOfMatrix l = new ListOfMatrix(ma);
+            l.AddMatrix(new Matrix(3, 0, 0, 3));
+            l.AddMatrix(m.Invertible);
+            Display(l.Max());
+            Display(l.Min());
         }
     }
 }
