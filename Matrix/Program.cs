@@ -143,12 +143,26 @@ namespace Matrix
                 Console.WriteLine("");
             }
         }
+        static void printArray(ListOfMatrix arr)
+        {
+            int n = arr.count;
+            for (int i = 0; i < n; ++i)
+            {
+                Display(arr[i]);
+                Console.WriteLine();
+            }
+        }
         static void Main(string[] args)
         {
             string s = "1 2 3 4";
             Matrix m = Matrix.TryParse(s);
-            Display(m);
-
+            Matrix m2 = new Matrix();
+            Matrix[] ma = new Matrix[] { m, m2 };
+            ListOfMatrix l = new ListOfMatrix(ma);
+            l.AddMatrix(new Matrix(3, 0, 0, 3));
+            l.AddMatrix(m.Invertible);
+            l.sort(0, 3);
+            printArray(l);
         }
     }
 }
