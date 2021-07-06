@@ -156,12 +156,6 @@ namespace Matrix
             string path = @"C:\Users\pboga\source\repos\Matrix\Matrix\bin\Debug\MatrixIn.txt";
             ListOfMatrix list = MatrixInOut.MatrixOut(path);
             printArray(list);
-<<<<<<<<< Temporary merge branch 1
-            l.AddMatrix(m.Invertible);
-            l.sort(0, 3);
-            printArray(l);
-=========
-
         }
 
     }
