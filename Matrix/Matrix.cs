@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Matrix
@@ -111,8 +110,8 @@ namespace Matrix
 
         public static Matrix Parse(string s)
         {
-            Matrix matrix = new Matrix(0, 0, 0, 0);
-            int[] ia = s.Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
+            Matrix matrix = new Matrix();
+            int[] ia = s.Split(" ").Select(n => Convert.ToInt32(n)).ToArray();
             matrix[0, 0] = ia[0];
             matrix[0, 1] = ia[1];
             matrix[1, 0] = ia[2];
@@ -154,12 +153,9 @@ namespace Matrix
         }
         static void Main(string[] args)
         {
-            string s = "1 2 3 4";
-            Matrix m = Matrix.TryParse(s);
-            Matrix m2 = new Matrix();
-            Matrix[] ma = new Matrix[] { m, m2 };
-            ListOfMatrix l = new ListOfMatrix(ma);
-            l.AddMatrix(new Matrix(3, 0, 0, 3));
+            string path = @"C:\Users\pboga\source\repos\Matrix\Matrix\bin\Debug\MatrixIn.txt";
+            ListOfMatrix list = MatrixInOut.MatrixOut(path);
+            printArray(list);
 
         }
 
