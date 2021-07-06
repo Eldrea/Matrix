@@ -5,6 +5,7 @@ namespace Matrix
 {
     class Matrix
     {
+        
 
         private double[,] matrix = new double[,] { };
         public double this[int i, int j]
@@ -129,40 +130,5 @@ namespace Matrix
                 throw new Exception(ex.Message);
             }
         }
-    }
-
-
-    class Programm
-    {
-        static void Display(Matrix matrix)
-        {
-            for (int i = 0; i < 2; i++)
-            {
-                for (int j = 0; j < 2; j++) Console.Write(matrix[i, j] + " ");
-                Console.WriteLine("");
-            }
-        }
-        static void printArray(ListOfMatrix arr)
-        {
-            int n = arr.count;
-            for (int i = 0; i < n; ++i)
-            {
-                Display(arr[i]);
-                Console.WriteLine();
-            }
-        }
-        static void Main(string[] args)
-        {
-            string path = @"C:\Users\pboga\source\repos\Matrix\Matrix\bin\Debug\MatrixIn.txt";
-            ListOfMatrix list = MatrixInOut.MatrixOut(path);
-            printArray(list);
-<<<<<<<<< Temporary merge branch 1
-            l.AddMatrix(m.Invertible);
-            l.sort(0, 3);
-            printArray(l);
-=========
-
-        }
-
     }
 }
