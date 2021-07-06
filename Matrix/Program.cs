@@ -160,9 +160,8 @@ namespace Matrix
             Matrix[] ma = new Matrix[] { m, m2 };
             ListOfMatrix l = new ListOfMatrix(ma);
             l.AddMatrix(new Matrix(3, 0, 0, 3));
-            l.AddMatrix(m.Invertible);
-            l.sort(0, 3);
-            printArray(l);
+
         }
+
     }
 }

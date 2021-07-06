@@ -115,5 +115,31 @@ namespace Matrix
 				merge(l, m, r);
 			}
 		}
+        public void ToArrString()
+        {
+            List<string> arr = new List<string>();
+            for (int i = 0; i < this.count; i++)
+            {
+                arr.Add($"{this[i].ToString()} ");
+            }
+            for(int i = 0; i < arr.Count; i++)
+            {
+                Console.WriteLine(arr[i]+'\n');
+            }
+        }
+        public Matrix[] ToArray()
+        {
+            Matrix[] arr = new Matrix[count];
+            for (int i = 0; i < count; i++) arr[i] = this[i];
+            return arr;
+        }
+        public Matrix First()
+        {
+            return this[0];
+        }
+        public Matrix Last()
+        {
+            return this[count - 1];
+        }
 	}
 }
